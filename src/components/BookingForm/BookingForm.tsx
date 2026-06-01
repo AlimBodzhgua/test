@@ -76,39 +76,33 @@ export const BookingForm = ({ className }: BookingFormProps) => {
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={clsx(styles.form, className)}>
-			<div className={styles.inputGroup}>
-				<div className={styles.inputWrapper}>
-					<label htmlFor={nameId} className={styles.label}>
-						Имя гостя
-					</label>
-					<input
-						id={nameId}
-						className={styles.input}
-						type='text'
-						placeholder='Имя'
-						{...register('name', getNameValidation())}
-					/>
+			<div className={styles.inputWrapper}>
+				<label htmlFor={nameId} className={styles.label}>
+					Имя гостя
+				</label>
+				<input
+					id={nameId}
+					className={styles.input}
+					type='text'
+					placeholder='Имя'
+					{...register('name', getNameValidation())}
+				/>
 
-					{errors.name && (
-						<span className={styles.error}>{errors.name?.message}</span>
-					)}
-				</div>
+				{errors.name && <span className={styles.error}>{errors.name?.message}</span>}
+			</div>
 
-				<div className={styles.inputWrapper}>
-					<label htmlFor={phoneId} className={styles.label}>
-						Номер телефона
-					</label>
-					<input
-						id={phoneId}
-						className={styles.input}
-						type='tel'
-						placeholder='Номер'
-						{...register('phone', getPhoneValidation())}
-					/>
-					{errors.phone && (
-						<span className={styles.error}>{errors.phone?.message}</span>
-					)}
-				</div>
+			<div className={styles.inputWrapper}>
+				<label htmlFor={phoneId} className={styles.label}>
+					Номер телефона
+				</label>
+				<input
+					id={phoneId}
+					className={styles.input}
+					type='tel'
+					placeholder='Номер'
+					{...register('phone', getPhoneValidation())}
+				/>
+				{errors.phone && <span className={styles.error}>{errors.phone?.message}</span>}
 			</div>
 
 			<div className={styles.inputGroup}>
