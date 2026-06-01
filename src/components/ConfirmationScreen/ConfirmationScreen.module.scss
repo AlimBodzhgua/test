@@ -1,0 +1,32 @@
+
+.title {
+	margin-bottom: 18px;
+}
+
+.check {
+	font-size: 24px;
+	margin-left: 12px;
+}
+
+.data {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+
+	gap: 8px;
+
+	margin-bottom: 24px;
+
+	font-size: 18px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+
+.actions {
+	display: flex;
+	align-self: end;
+
+	gap: 6px;
+	
+}
