@@ -5,10 +5,10 @@ import { memo, useCallback, useEffect } from 'react';
 import styles from './Modal.module.scss';
 
 interface ModalProps {
-	isOpen?: boolean;
+	isOpen: boolean;
 	onClose: () => void;
-	className?: string;
 	children: ReactNode;
+	className?: string;
 }
 
 export const Modal: FC<ModalProps> = memo((props) => {
